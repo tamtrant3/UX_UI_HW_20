@@ -153,6 +153,10 @@ ul {
         grid-column: span 12;
         margin-top: 3rem;
     }
+
+    #heroimg {
+        background-size: 90%;
+    }
 }
 
 /*600px screen*/
@@ -192,6 +196,11 @@ ul {
 
     .intiallyHidden {
         display: none;
+    }
+
+    #heroimg {
+        background-size: 130%;
+        background-position: 70% 50%;
     }
 
     .number {
