@@ -23,7 +23,6 @@ html, body {
 
 nav {
     height: var(--nav-height);
-    /* border-bottom: var(--ln); */
     padding: 0 var(--page-margin);
     display: flex;
     align-items: center;
@@ -72,6 +71,8 @@ nav .burger {
 #shell {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin: 0rem 3rem;
+    margin-top: 3rem;
 }
 
 /* STEPPER */
@@ -80,8 +81,6 @@ nav .burger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 3rem;
-    margin-left: 3rem;
     gap: 1rem;
     height: 30vh;
     position: sticky;
@@ -108,8 +107,6 @@ nav .burger {
 /*MAIN */
 main {
     grid-column: span 10;
-    margin-top: 3rem;
-    margin-right: 6rem;
     max-height: calc(100vh - var(--nav-height));
     display: flex;
     flex-direction: column;
@@ -143,7 +140,27 @@ ul {
 }
 
 /*MEDIA QUERIES */
+
+/*1150px screen*/
+@media only screen and (max-width: 1150px) {
+    #stepper {
+        grid-column: span 12;
+        flex-direction: row;
+        height: 10vh;
+    }
+
+    main {
+        grid-column: span 12;
+        margin-top: 3rem;
+    }
+}
+
+/*600px screen*/
 @media only screen and (max-width: 600px) {
+    nav {
+        padding: 0 2rem;
+    }
+
     nav .links {
         display: none;
     }
@@ -175,5 +192,46 @@ ul {
 
     .intiallyHidden {
         display: none;
+    }
+
+    .number {
+        display: none;
+    }
+
+    #stepper {
+        background-color: white;
+        margin-top: 2rem;
+    }
+
+    #shell {
+        margin: 0 2rem;
+    }
+
+    .steptitle {
+        border: 1px solid black;
+        padding: 0.4rem;
+        border-radius: 1rem;
+        box-shadow: 0.1rem 0.1rem 0 black;
+    }
+
+    .overviewdetails {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #team {
+        grid-column: span 6;
+    }
+
+    #roles {
+        grid-column: span 6;
+    }
+
+    #timeframe {
+        grid-column: span 6;
+    }
+
+    #tools {
+        grid-column: span 6;
     }
 }

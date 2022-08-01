@@ -314,7 +314,7 @@ main > .projects > .casestudygroup > .casestudy > .right {
     grid-row: 2/3;
 }
 
-button {
+.button {
     width: 30%;
     min-height: 36px;
     background-color: white;
@@ -323,15 +323,19 @@ button {
     box-shadow: 0.2rem 0.2rem 0 black;
     font-weight: 700;
     font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover {
+.button:hover {
     box-shadow: 0.4rem 0.4rem 0 black;
 }
 
-button:active {
+.button:active {
     box-shadow: 3px 3px white;
     transition: 0.3ms;
     transform: scale(0.9);
@@ -343,7 +347,7 @@ button:active {
 /*1200px SCREEN */
 
 @media only screen and (max-width: 1200px) {
-    .casestudy > .left > button {
+    .casestudy > .left > .button {
         width: 40%;
     }
 }
@@ -371,7 +375,7 @@ button:active {
         gap: 1rem;
     }
 
-    .casestudy > .left > button {
+    .casestudy > .left > .button {
         width: 50%;
     }
 } 
