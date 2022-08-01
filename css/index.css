@@ -423,6 +423,10 @@ main > .projects > .casestudygroup > .casestudy > .right {
         right: 0;
     }
 
+    body {
+        min-height: 300vh;
+    }
+
     main {
         padding: 5rem 2rem;
         overflow-y: visible;
