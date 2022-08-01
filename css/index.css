@@ -29,6 +29,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 nav .links {
@@ -384,6 +386,11 @@ main > .projects > .casestudygroup > .casestudy > .right {
 /* 796px SCREEN */
 
 @media only screen and (max-width: 796px) {
+    nav {
+        position: sticky;
+        top: 0;
+    }
+    
     #shell {
         display: flex;
         flex-direction: column;
