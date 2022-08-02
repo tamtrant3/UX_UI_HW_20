@@ -139,6 +139,11 @@ ul {
     padding: 1rem;
 }
 
+#wiresimg {
+    border: var(--ln);
+    height: 40vh;
+}
+
 /*MEDIA QUERIES */
 
 /*1150px screen*/
