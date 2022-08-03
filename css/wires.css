@@ -175,9 +175,9 @@ ul {
     transition: 0.3s;
 }
 
-#wiresimg1:hover {
+/*#wiresimg1:hover, #wiresimg2:hover {
     transform: scale(1.05);
-}
+} */
 
 #wiresimg2 {
     height: 50vh;
@@ -189,10 +189,6 @@ ul {
     transition: 0.3s;
 }
 
-#wiresimg2:hover {
-    transform: scale(1.05);
-}
-
 .problemdetails {
     display: flex;
     justify-content: space-between;
@@ -202,6 +198,96 @@ ul {
 #colorproblem p, #navproblem p, #contentproblem p {
     margin-top: 1rem;
 }
+
+#colorcontrast {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.contrastgroup {
+    grid-column: span 3;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#contrastgroup5, #contrastgroup6, #contrastgroup7, #contrastgroup8 {
+    margin-top: 1rem;
+}
+
+.colorcircles {
+    display: flex;
+}
+
+.colorcircles > * {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: var(--ln);
+}
+
+#circle1, #circle3, #circle5, #circle7 {
+    background-color: white;
+}
+
+#circle2, #circle4, #circle6, #circle8, #circle10, #circle12, #circle14, #circle16 {
+    border: none;
+    transform: translate(-0.5rem, 0rem);
+    z-index: -1;
+}
+
+#circle2 {
+    background-color: #95D50C;
+}
+
+#circle4 {
+    background-color: #FD7F32;
+}
+
+#circle6 {
+    background-color: #377EEA;
+}
+
+#circle8 {
+    background-color: #EC414B;
+}
+
+#circle9, #circle11, #circle13, #circle15 {
+    border: none;
+}
+
+#circle9, #circle13 {
+    background-color: #95D50C;
+}
+
+#circle10, #circle12 {
+    background-color: white;
+    border: var(--ln);
+}
+
+#circle11 {
+    background-color: #333333;
+}
+
+#circle14 {
+    background-color: #444444;
+}
+
+#circle15 {
+    background-color: #CCCCCC;
+}
+
+#circle16 {
+    background-color: #333333;
+}
+
+#failcontrast {
+    color: #FF0000;
+}
+
+#passcontrast {
+    color: #005CE8;
+}
+
 
 /*MEDIA QUERIES */
 
@@ -273,6 +359,32 @@ ul {
     #wiresimg2 {
         width: 100%;
         background-size: cover;
+    }
+    
+    .problemdetails {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #colorproblem {
+        grid-column: span 6;
+    }
+
+    #navproblem {
+        grid-column: span 6;
+    }
+
+    #contentproblem {
+        grid-column: span 6;
+    }
+
+    .contrastgroup {
+        grid-column: span 6;
+        margin-bottom: 1rem;
+    }
+
+    #contrastgroup5, #contrastgroup6, #contrastgroup7, #contrastgroup8 {
+        margin-top: 0;
     }
 }
 
