@@ -12,6 +12,11 @@ html, body {
     height: 100%;
 }
 
+/* Adjustment so that stepper and nav can stay sticky */
+body, main {
+    min-height: 200vh;
+}
+
 :root {
     --ln: 1px solid #424242;
     --page-margin: 3rem;
@@ -84,7 +89,8 @@ nav .burger {
     gap: 1rem;
     height: 30vh;
     position: sticky;
-    top: 72px;
+    top: 71px;
+    background-color: white;
 }
 
 .step {
@@ -102,6 +108,17 @@ nav .burger {
     min-width: 2rem;
     min-height: 2rem;
     font-weight: 700;
+    transition: 0.3s;
+}
+
+.number:hover {
+    box-shadow: 0.35rem 0.35rem 0 black;
+}
+
+.number:active {
+    box-shadow: none;
+    transition: 0.3ms;
+    transform: scale(0.9);
 }
 
 /*MAIN */
@@ -127,7 +144,7 @@ main {
 .sectioncontent {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .overviewdetails {
@@ -139,9 +156,49 @@ ul {
     padding: 1rem;
 }
 
+/*Research */
+
 #wiresimg {
-    border: var(--ln);
-    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#wiresimg1 {
+    height: 50vh;
+    width: 45%;
+    background-image: url(../images/wiresimg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#wiresimg1:hover {
+    transform: scale(1.05);
+}
+
+#wiresimg2 {
+    height: 50vh;
+    width: 45%;
+    background-image: url(../images/wiresimg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+#wiresimg2:hover {
+    transform: scale(1.05);
+}
+
+.problemdetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#colorproblem p, #navproblem p, #contentproblem p {
+    margin-top: 1rem;
 }
 
 /*MEDIA QUERIES */
@@ -162,7 +219,61 @@ ul {
     #heroimg {
         background-size: 90%;
     }
+
+    #wiresimg1 {
+        background-size: contain;
+        height: 40vh;
+    }
+    #wiresimg2 {
+        background-size: contain;
+        height: 40vh;
+    }
 }
+
+/* 796px screen*/
+@media only screen and (max-width: 796px) {
+    .overviewdetails {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    #team {
+        grid-column: span 6;
+    }
+
+    #roles {
+        grid-column: span 6;
+    }
+
+    #timeframe {
+        grid-column: span 6;
+        margin-top: 1rem;
+    }
+
+    #tools {
+        grid-column: span 6;
+        margin-top: 1rem;
+    }
+
+    #wiresimg {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #wiresimg1 {
+        width: 100%;
+        background-size: cover;
+        height: 70vh;
+    }
+
+    #wiresimg2 {
+        width: 100%;
+        background-size: cover;
+    }
+}
+
 
 /*600px screen*/
 @media only screen and (max-width: 600px) {
@@ -226,26 +337,5 @@ ul {
         padding: 0.4rem;
         border-radius: 1rem;
         box-shadow: 0.1rem 0.1rem 0 black;
-    }
-
-    .overviewdetails {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    #team {
-        grid-column: span 6;
-    }
-
-    #roles {
-        grid-column: span 6;
-    }
-
-    #timeframe {
-        grid-column: span 6;
-    }
-
-    #tools {
-        grid-column: span 6;
     }
 }

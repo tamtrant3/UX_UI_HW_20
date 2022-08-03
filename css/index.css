@@ -338,7 +338,7 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 .button:active {
-    box-shadow: 3px 3px white;
+    box-shadow: none;
     transition: 0.3ms;
     transform: scale(0.9);
 }
