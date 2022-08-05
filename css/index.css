@@ -344,6 +344,8 @@ main > .projects > .casestudygroup > .casestudy > .right {
     transform: scale(0.9);
 }
 
+/*FORM*/
+
 form {
     padding-top: 1.5rem;
     margin: 0 auto;
@@ -359,6 +361,8 @@ form input {
     width: 100%;
     height: 2.3rem;
     padding: 0 1rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
 }
 
 form .action {
@@ -388,7 +392,9 @@ form label {
 form textarea {
     height: 7rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
     resize: none;
 }
 
