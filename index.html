@@ -40,7 +40,7 @@
                 <a href="#">About</a>
                 <a href="#">Work</a>
                 <a href="#">Resume</a>
-                <a href="#">Contact</a>
+                <a href="#contact-section">Contact</a>
             </div>
             <div class="burger">|||</div>
         </nav>
@@ -111,6 +111,7 @@
                         </div>
                     </div>
                 </section>
+                <!--SKILLS-->
                 <section class="skills">
                     <div class="sectiontitle"><h2>Skills</h2></div>
                     <div class="softwares">
@@ -121,6 +122,30 @@
                         <div class="ps"></div>
                         <div class="pr"></div>
                     </div>
+                </section>
+                <!--End of Skills-->
+                <!--Contact Form-->
+                <section id="contact-section">
+                    <div class="sectiontitle"><h2>Contact Me</h2></div>
+                    <form name="contact" netlify>
+                        <div id="form-name-section">
+                            <div class="form-name">
+                                <label>First name</label>
+                                <input type="text" name="name" />
+                            </div>
+                            <div class="form-name">
+                                <label>Last name</label> 
+                                <input type="text" name="name" />
+                            </div>
+                        </div>
+                        <label>Email</label> 
+                        <input type="email" name="email" />
+                        <label>Message</label> 
+                        <textarea name="message" id="messageinput" ></textarea>
+                        <div class="action">
+                            <button type="submit" class="button">Send</button>
+                        </div>
+                    </form>
                 </section>
             </main>
         </section>
